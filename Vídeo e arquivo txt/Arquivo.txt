@@ -1,0 +1,54 @@
+﻿Giovanna Maria Alves Evangelista - 12121BSI266
+Henrick Oliveira de souza - 12121BSI237
+
+
+Casos de testes usados para testar o programa:
+
+
+Pilha vazia —----------------------------------------------------------------------
+
+
+Nesse caso de teste, foi pensado na questão da pilha de chocolates que cada recebe em seu atendimento e que se a estrutura de dados pilha estivesse vazia, poderia acarretar um erro no programa caso o usuário tentasse realizar o comando no painel. Dessa maneira, como forma de teste, buscamos soluções que poderiam tratar esse caso específico e ter um código mais dinâmico e tratado.
+
+
+Primeiramente, testamos o programa sem esse aspecto e com a pilha vazia, o que acarretou no erro “segmentation fault” e o cliente não receberia o bônus. Dessa forma, implementamos uma condicional que trataria o caso. Ao tentar atender o cliente com a pilha de chocolates vazia, o programa bloqueia o comando devido a uma condicional feita e dispara uma mensagem dizendo que deve-se acrescentar chocolates antes de prosseguir. Após isso, a repetição do menu continua. Caso a pilha não esteja vazia, o atendimento prossegue normalmente.
+
+
+
+
+Fila vazia —-------------------------------------------------------------------------------
+
+
+O caso fila vazia assemelha-se ao da pilha vazia, uma vez que não é possível realizar o atendimento de clientes se não houver nenhum esperando na fila. Como caso de teste, tentamos usar o comando sem que houvesse registro de clientes, o que desencadeou um erro e fez o programa “parar”. Logo, chegamos a conclusão que teríamos que tratar esse erro também fazendo uso de uma condicional para se o caso fosse verdadeiro.
+
+
+Assim, com a condicional, se ao tentar atender o cliente com a fila vazia, o programa também bloqueia a ação e dispara uma mensagem alertando o usuário que não há nenhum cliente aguardando na fila, e pede para que ele adicione algum para usar o comando. Em seguida, ele volta para o menu de escolhas e pede ao usuário que selecione um novo comando.
+
+
+
+
+Menu (cardápio) sem itens —-------------------------------------------------------------
+
+
+Esse caso de teste corresponde a possibilidade do cardápio do restaurante não possuir nenhum item para ser vendido em seu sistema, o que impossibilitaria os atendimentos no programa. Testamos e não faria sentido não tratar o caso, por não ter nada a venda. A função que adiciona um item do menu ao cliente (em sua comanda) é feita buscando o ID do item para que assim seja inserido. Se o cardápio estiver vazio, ela irá buscar infinitamente por IDs que não existem, o que acarreta no disfuncionamento do código. 
+
+
+Portanto, foi necessário implementarmos uma condicional que avaliava a quantidade de itens dentro do menu. Se o valor for zero, não será possível criar nenhum novo cliente para ser atendido.
+
+
+Pilha e fila cheia —-------------------------------------------------------------
+
+
+Os casos de fila e pilha cheia se dão quando a fila de clientes chegou ao seu limite e a pilha de chocolates encontrou o topo, não podendo adicionar mais nenhum em ambas estruturas de dados. Testamos para averiguar o que ocorreria caso o usuário tentasse adicionar qualquer um dos elementos nos TAD que chegaram ao seu limite, também fazendo uso de condicionais e de parâmetros para que não fosse possível prosseguir com o comando.
+
+
+
+
+Caso a condicional “cheia” seja verdadeira, os casos de fila e pilha cheia travam respectivamente as funções:
+
+
+Adicionar chocolates a pilha
+Criar um novo cliente para ser atendido
+
+
+Dessa forma, conseguimos tornar o código mais dinâmico e de melhor funcionalidade para o usuário.
